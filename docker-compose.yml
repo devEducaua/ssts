@@ -10,12 +10,12 @@ services:
     command: bun run dev
   db:
     image: postgres
-    container_name: postgres-db
+    container_name: db
     restart: always
     enviroment:
-      POSTGRES_USER: db
-      POSTGRES_PASSWORD: db
-      POSTGRES_DB: db 
+      POSTGRES_USER: ssts
+      POSTGRES_PASSWORD: ssts
+      POSTGRES_DB: db
     ports:
       - "5432:5432"
     volumes:
