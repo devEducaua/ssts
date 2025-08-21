@@ -1,4 +1,4 @@
-# Microblogging
-/users
-/posts -> upvote/downvote
+# SSTS
+simple social in typescript.
+this is a simple projet for study purposes.
 
