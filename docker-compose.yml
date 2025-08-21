@@ -1,0 +1,25 @@
+services:
+  app:
+    build: .
+    container_name: api
+    ports:
+      - "6969:6969"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: bun run dev
+  db:
+    image: postgres
+    container_name: postgres-db
+    restart: always
+    enviroment:
+      POSTGRES_USER: db
+      POSTGRES_PASSWORD: db
+      POSTGRES_DB: db 
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
