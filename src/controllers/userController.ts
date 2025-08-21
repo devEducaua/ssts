@@ -15,7 +15,7 @@ export default class UserController {
     }
 
     async getOne(c: Context) {
-        const user = await this.service.getOne(c.req.param("id"));
+        const user = await this.service.getOne(c.req.param("userId"));
         c.json(user);
     }
 
